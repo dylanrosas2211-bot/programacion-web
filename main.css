@@ -1,0 +1,67 @@
+/*los elementos se aplican de arriba para abajo y de izquierda a derecha*/
+
+/* Hoja de estilos de css */
+
+/* tipos de selectores: */
+
+/* selector de etiqueta */
+/*etiqueta son todo lo que esta adentro de las boquitas y
+si agrego una caracteristica ej: cambiar de color le va a cambiar
+el color a todas las etiquetas q se llamen asi/*
+/*h1 titulo principal, h2 titulo secundario, h3 titulo secundario secundario etc*/
+h1 {
+  /*propiedad: valor;*/
+  color:#ff0000; /*cambia color letra*/
+  background-color: burlywood; /*cambia color fondo*/
+}
+
+
+/*body el cuerpo de toda la pagina web*/
+body {
+  background-color: #f0f0f0;
+}
+
+/* generar clases con las propiedades deseadas */
+/* solo se pueden usar en elementos que tengan esa clase */
+/* selector de clase */
+/*solo modifica lo aplicado en el html*/
+/*html la estructura de la pagina web,osea las etiquetas y en esas etiquetas 
+le podemos poner clases que seria class=(el nombre asignado)
+como abajo que seria tipo de letra: */
+.tipo-de-letra {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px; /*tamaño letra*/
+}
+
+
+/* selector de id */
+/* se pueden usar solo en un elemento de la pagina */
+#titulo-principal {
+  color: blue;
+}
+
+/* display:flex */
+/* hace que los elementos hijos se acomoden 
+en fila o columna dependiendo del valor de flex-direction */
+/*siempre el flex modifica contenedores*/
+.contenedor {
+  display: flex; /*el flex acomoda todo en una misma linea y de lado izquierdo*/
+  justify-content: space-around; /**la distancia la alineacion en la que estan acomodados los elementos*/
+}
+.ordenar {
+    display: flex;
+     justify-content: space-around;
+     gap: 10px;
+}
+/* justify-content: alinea los elementos hijos horizontalmente */
+/* flex-start: alinea a la izquierda */
+/* flex-end: alinea a la derecha */
+/* center: alinea al centro */
+/* space-between: distribuye el espacio entre los elementos */
+/* space-around: distribuye el espacio alrededor de los elementos */
+/* space-evenly: distribuye el espacio de manera uniforme entre los elementos */
+
+/*documentacion con ejemplos visuales
+
+MDN -> developer.mozilla.org 
+*/
