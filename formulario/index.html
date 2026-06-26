@@ -2,18 +2,18 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Pizzería la tia Benita — Pedidos Online</title>
+    <title>Hamburgueseria — Pedidos Online</title>
     <link rel="stylesheet" href="index.css">
   </head>
 
   <body>
     <header>
-      <h1>Pizzería la tia Benita</h1>
+      <h1>Hamburgueseria</h1>
       <p>Pedidos online</p>
     </header>
 
     <main>
-      <form>
+      <div>
         <h2>Tu pedido</h2>
 
         <section>
@@ -22,8 +22,8 @@
           <label for="nombre">Nombre completo</label>
           <input type="text" id="nombre" name="nombre" required />
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <label for="direccion">Direccion</label>
+          <input type="direccion" id="direccion" name="direccion" required />
 
           <label for="telefono">Teléfono</label>
           <input type="text" id="telefono" name="telefono" />
@@ -32,25 +32,25 @@
         <section>
           <h3>Tamaño</h3>
 
-          <input type="radio" id="chica" name="tamanio" value="chica" />
-          <label for="chica">Chica (4 porciones)</label>
+          <input type="radio" id="simple" name="simple" value="simple" />
+          <label for="simple">Simple (1 carne)</label>
 
-          <input type="radio" id="mediana" name="tamanio" value="mediana" />
-          <label for="mediana">Mediana (6 porciones)</label>
+          <input type="radio" id="doble" name="doble" value="doble" />
+          <label for="doble">Doble (2 carnes)</label>
 
-          <input type="radio" id="grande" name="tamanio" value="grande" />
-          <label for="grande">Grande (8 porciones)</label>
+          <input type="radio" id="triple" name="triple" value="triple" />
+          <label for="triple">Triple (3 carnes)</label>
         </section>
 
         <section>
-          <h3>Tipo de masa</h3>
+          <h3>Para tomar</h3>
 
-          <label for="masa">Elegí tu masa</label>
-          <select id="masa" name="masa" required>
+          <label for="bebida">Bebida</label>
+          <select id="bebida" name="bebida" required>
             <option value="">-- Elegí una --</option>
-            <option value="clasica">Clásica</option>
-            <option value="delgada">Delgada y crocante</option>
-            <option value="rellena">Rellena en los bordes</option>
+            <option value="clasica">CocaCola</option>
+            <option value="delgada">Sprite</option>
+            <option value="rellena">Pepsi</option>
           </select>
         </section>
 
@@ -59,49 +59,33 @@
 
           <input
             type="checkbox"
-            id="mozzarella"
-            name="ingrediente_mozzarella"
-            value="mozzarella"
+            id="cebolla"
+            name="cebolla"
+            value="cebolla"
           />
-          <label for="mozzarella">Mozzarella extra</label>
+          <label for="cebolla">Cebolla caramelizada</label>
 
           <input
             type="checkbox"
-            id="jamon"
-            name="ingrediente_jamon"
-            value="jamon"
+            id="huevo"
+            name="huevo"
+            value="huevo"
           />
-          <label for="jamon">Jamón</label>
+          <label for="huevo">Huevo</label>
 
           <input
             type="checkbox"
-            id="champignones"
-            name="ingrediente_champignones"
-            value="champignones"
+            id="bacon"
+            name="bacon"
+            value="bacon"
           />
-          <label for="champignones">Champiñones</label>
+          <label for="bacon">Bacon</label>
 
-          <input
-            type="checkbox"
-            id="aceitunas"
-            name="ingrediente_aceitunas"
-            value="aceitunas"
-          />
-          <label for="aceitunas">Aceitunas</label>
-
-          <input
-            type="checkbox"
-            id="morron"
-            name="ingrediente_morron"
-            value="morron"
-          />
-          <label for="morron">Morrón</label>
-        </section>
-
+        
         <section>
           <h3>Cantidad</h3>
 
-          <label for="cantidad">¿Cuántas pizzas?</label>
+          <label for="cantidad">¿Cuántas hamburguesas?</label>
           <input
             type="number"
             id="cantidad"
@@ -114,18 +98,19 @@
         </section>
 
         <section>
-          <h3>Comentarios</h3>
+          <h3>Reseñas</h3>
 
-          <label for="comentarios">¿Algo más que quieras avisarnos?</label>
+          <label for="comentarios">¿Que te parecio?</label>
           <textarea id="comentarios" name="comentarios" rows="4"></textarea>
         </section>
 
-        <button id="button-agregar" type="submit">Hacer pedido</button>
-      </form>
+        <button id="button" type="submit">Hacer pedido</button>
+      </div>
     </main>
 
     <footer>
-      <p>Pizzería La Nona — Ramos Mejía, Buenos Aires</p>
+      <p>Hamburgueseria — Villa Celina, Buenos Aires</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -30,7 +30,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
-form {
+div {
   max-width: 600px;
   margin: 40px auto;
   padding: 32px;
@@ -80,7 +80,7 @@ input[type="number"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: #e69539;
+  border-color: #c14912;
   background-color: #fff;
   box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
 }
@@ -104,8 +104,8 @@ textarea {
 button[type="submit"] {
   width: 100%;
   padding: 14px;
-  background-color: #e63946;
-  color: white;
+  background-color: #c14912;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
   font-weight: bold;
   border: none;
@@ -115,12 +115,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #c11212;
+  background-color: #c14912;
 }
 
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.85rem;
-  color: #888;
+  color: #888888;
 }
