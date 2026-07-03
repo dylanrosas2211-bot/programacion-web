@@ -30,13 +30,6 @@ button.addEventListener("click", ()=> {
             } en la sentencia`,
         );
 
-     nombre = " "   
-     direccion = " "
-     telefono = " "
-     simple = " "
-     doble = " "
-     triple = " "
-
        mensaje.innerHTML = `
     <h3>¡Pedido realizado con éxito!</h3>
     <p><strong>Nombre:</strong> ${nombre}</p>
