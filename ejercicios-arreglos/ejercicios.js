@@ -88,8 +88,9 @@ const preciosConIVA = productos.map(function (producto) {
     precioFinal: Math.round(producto.precio * 1.21),
   };
 });
+console.log(preciosConIVA);
 
-//console.log(preciosConIVA);
+//Ejercicio 3 
 const nombresMuebles = productos
   .filter(function (producto) {
     return producto.categoria === "Muebles";
@@ -98,4 +99,72 @@ const nombresMuebles = productos
     return producto.nombre;
   });
 
-console.log(nombresMuebles);
+//console.log(nombresMuebles);
+
+
+//Ejercicio 4 — `find` Encontrá el producto con `id === 6` y mostrá su nombre y precio en consola.
+
+const producto = productos.find(function(p) {
+  return p.id === 6;
+});
+//console.log(producto);
+
+
+//Ejercicio 5 — find con verificación
+const mouseEncontrado = productos.find((p) => p.nombre.includes("Mouse"))
+//console.log(mouseEncontrado)
+if(mouseEncontrado.nombre == "Mouse Inalámbrico")
+  {
+  //console.log(`Encontrado: [${mouseEncontrado.nombre}]`)
+  }
+  else {
+  //console.log ("No encontrado")
+  }
+
+  
+
+//Ejercicio 6 Respondé estas preguntas con `some` o `every`, cada una en una línea:
+
+//1. ¿Hay algún producto con precio mayor a $100.000?
+
+//console.log(productos.some(p => p.precio > 100000));
+
+//2. ¿Todos los productos tienen `id` definido?
+
+//console.log(productos.every(p => p.id !== undefined)); 
+
+//3. ¿Hay algún producto inactivo (`activo: false`)?
+
+//console.log(productos.some(p => p.activo === false)); 
+
+//4. ¿Todos los productos de Electrónica tienen stock mayor a 0?
+
+//console.log(productos.filter(p => p.categoria === "Electrónica").every(p => p.stock > 0)); 
+
+//Para la última, vas a necesitar `filter` antes de `every`.
+
+//ejercicio 7 HACER CON EL PROFE (REDUCE)
+
+//ejercicio 8 — encadenamiento
+const productosFiltrados = productos
+  .filter(p => p.activo)
+  .filter(p => p.stock > 0)
+  .filter(p => p.precio < 20000)
+  .map(p => p.nombre);
+
+//console.log(productosFiltrados);
+
+//Ejercicio 9 HACER CON EL PROFE (REDUCE)
+
+//Ejercicio 10 — integrador HACER CON EL PROFE YA QUE NO PUDE TERMINARLO
+//(No pude entender lo demas solo total y activos)
+const resumirInventario = (productos) => {
+  const total = productos.length;
+  const activos = productos.filter(p => p.activo).length;
+  return {
+    total: total,
+    activos: activos
+  };
+};
+
+//console.log(resumirInventario(productos));
