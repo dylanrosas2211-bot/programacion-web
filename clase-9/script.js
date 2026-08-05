@@ -32,3 +32,27 @@ const consola = config.notificaciones === true && "Notificaciones activas"
 //console.log(consola)
 
 //Ejercicio 3
+const pelicula = {
+  titulo: "Interstellar",
+  director: "Christopher Nolan",
+  año: 2014,
+  duracion: 169,
+  genero: "Ciencia ficción"
+};
+/*
+1. Desestructurá `titulo`, `director` y `año` en variables propias.
+2. Desestructurá `duracion` renombrándola como `duracionMinutos`.
+3. Desestructurá `calificacion` con un valor por defecto de `"Sin calificar"`.
+4. Escribí una función `mostrarPelicula(pelicula)` que reciba el objeto y muestre `"[titulo] ([año]) — Dir. [director]"`,
+ usando destructuring en el parámetro.*/
+
+ const {titulo,director,año} = pelicula
+
+ const{duracion:duracionMinutos } = pelicula
+
+ const {calificacion = "Sin calificar"} = pelicula
+
+ function mostrarPelicula(pelicula) {
+    const {titulo,año,director} = pelicula
+    console.log(`${titulo} ${año} — Dir. ${director}`)
+ }
