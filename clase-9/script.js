@@ -56,3 +56,33 @@ const pelicula = {
     const {titulo,año,director} = pelicula
     console.log(`${titulo} ${año} — Dir. ${director}`)
  }
+
+ //### Ejercicio 4 — Destructuring de arrays
+
+
+const coordenadas = [40.7128, -74.0060, 10];
+const colores = ["rojo", "verde", "azul", "amarillo"];
+
+/*1. Desestructurá `coordenadas` en variables `latitud`,
+ `longitud` y `altitud`.
+2. Desestructurá `colores` tomando solo el primero 
+y el último (saltá los del medio). Para el último,
+ fijate cuántos elementos tiene el array.
+3. Desestructurá `colores` tomando el primero y 
+guardando el resto en una variable `resto` usando
+ el operador `...` (rest).*/
+
+ const [Primera_Cordenada, Segunda_Cordenada, Tercera_Cordenada] = coordenadas
+ console.log (Primera_Cordenada);
+ console.log (Segunda_Cordenada);
+ console.log (Tercera_Cordenada);
+
+
+ const [rojo, , , amarillo] = colores
+ console.log(rojo)
+ console.log(amarillo)
+
+ const [primero, ...rest] = colores
+ console.log(primero, rest)
+
+ 
