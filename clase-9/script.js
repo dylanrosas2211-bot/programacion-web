@@ -73,16 +73,36 @@ guardando el resto en una variable `resto` usando
  el operador `...` (rest).*/
 
  const [Primera_Cordenada, Segunda_Cordenada, Tercera_Cordenada] = coordenadas
- console.log (Primera_Cordenada);
- console.log (Segunda_Cordenada);
- console.log (Tercera_Cordenada);
+ //console.log (Primera_Cordenada);
+ //console.log (Segunda_Cordenada);
+ //console.log (Tercera_Cordenada);
 
 
  const [rojo, , , amarillo] = colores
- console.log(rojo)
- console.log(amarillo)
+ //console.log(rojo)
+ //console.log(amarillo)
 
  const [primero, ...rest] = colores
- console.log(primero, rest)
+ //console.log(primero, rest)
 
- 
+//Ejercicio 5 — Spread
+
+
+const base = { marca: "Samsung", modelo: "Galaxy S24", precio: 180000 };
+const descuento = { precio: 150000, enOferta: true };
+
+
+/*1.Creá una copia de `base` sin modificar el original.
+2.Creá un objeto `oferta` que tenga todas las propiedades
+de `base` más `enOferta: true` y `precio: 150000`.
+3.Combiná `base` y `descuento` en un solo objeto
+Si hay propiedades repetidas, que gane `descuento`.
+4.Tenés este array: `const carrito = ["auriculares", "teclado"]`.
+Creá un nuevo array `carritoActualizado` que tenga los mismos elementos
+más `"mouse"` al final, sin modificar `carrito`.*/
+
+const copia = {...base};
+console.log(base);
+console.log(copia);
+// se usa [] para numeros y {} para palabras
+
