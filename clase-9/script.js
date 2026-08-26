@@ -101,8 +101,44 @@ Si hay propiedades repetidas, que gane `descuento`.
 Creá un nuevo array `carritoActualizado` que tenga los mismos elementos
 más `"mouse"` al final, sin modificar `carrito`.*/
 
-const copia = {...base};
+const copia = {...base, enOferta: true, precio: 150000};
 console.log(base);
 console.log(copia);
 // se usa [] para numeros y {} para palabras
+
+const objeto = { ...base, ...descuento }
+console.log(objeto)
+
+const carrito = ["auriculares", "teclado"]
+const carritoActualizado = [...carrito , "mouse"]
+
+/*### Ejercicio 6 — Import/Export
+
+Creá dos archivos:
+
+**`utilidades.js`** — exportá estas tres funciones con named export:
+
+- `formatearPrecio(precio)` → devuelve `"$120.000"` (con separador de miles)
+- `calcularDescuento(precio, porcentaje)` → devuelve el precio con el descuento aplicado
+- `estaDisponible(stock)` → devuelve `true` si el stock es mayor a 0
+
+**`main.js`** — importá las tres funciones y usá cada una:
+
+```jsx
+console.log(formatearPrecio(120000));        // "$120.000"
+console.log(calcularDescuento(10000, 20));   // 8000
+console.log(estaDisponible(0));              // false
+console.log(estaDisponible(5));              // true
+``` */
+
+
+import formatearPrecio from "./utilidades"
+import calcularDescuento from "./utilidades"
+import estaDisponible from "./utilidades"
+
+console.log(formatearPrecio(120000));        // "$120.000"
+console.log(calcularDescuento(10000, 20));   // 8000
+console.log(estaDisponible(0));              // false
+console.log(estaDisponible(5));              // true
+
 
