@@ -11,7 +11,7 @@ function sumar(){
 
 return( 
 <>
-<button onClick={}>sumar</button>
+<button onClick={sumar}>sumar</button>
 <button>restar</button>
 <button>reiniciar</button>
 </>
