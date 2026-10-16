@@ -30,4 +30,35 @@ async function nombres() {
   }
 }
 
-nombres();
+//nombres();
+
+//Agarrar la url https://api.github.com/users/TU_USUARIO y traer los datos solicitados
+//foto, nombre y cantidad de repositorios publicos. -> hecho
+//loguear los resultados dentro de la funcion -> hecho
+//solamente devolver el nombre, foto y cantidad de repos en un objeto nuevo
+
+async function traerPerfilDeGitHub() {
+  try {
+    const traerDatosSolicitadosGitHub = await fetch(
+      "https://api.github.com/users/dylanrosas2211-bot",
+    );
+    if (!traerDatosSolicitadosGitHub.ok) {
+      throw new Error("Error HTTP: " + traerDatosSolicitadosGitHub.status);
+    }
+    const datosTransformados = await traerDatosSolicitadosGitHub.json();
+    console.log({
+      nombre: datosTransformados.name,
+      foto: datosTransformados.avatar_url,
+      cantidadRepos: datosTransformados.public_repos,
+    });
+    return {
+      nombre: datosTransformados.name,
+      foto: datosTransformados.avatar_url,
+      cantidadRepos: datosTransformados.public_repos,
+    };
+  } catch (error) {
+    console.log("Hubo un error", error);
+  }
+}
+
+const perfilDeGitHub = traerPerfilDeGitHub();
