@@ -1,0 +1,20 @@
+{
+  "tareas": [
+    {
+      "texto": "tarea",
+      "hecha": false,
+      "id": "cRL7dMqazDU"
+    },
+    {
+      "texto": "tarea",
+      "hecha": false,
+      "id": "CU735WBBYC8"
+    },
+    {
+      "texto": "tarea",
+      "hecha": false,
+      "id": "CQb92RWL0AI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
