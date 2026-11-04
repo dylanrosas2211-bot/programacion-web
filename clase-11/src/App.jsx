@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Reloj from './componentes/reloj'
+import ClicksYRenders from './componentes/clickYrender'
 
 function App() {
   const [abierto,setAbierto] = useState(true)
@@ -13,12 +14,12 @@ function App() {
     <>
       hola dylan
       <button onClick={ocultarReloj}>
-        ocultar 
+        ocultar
       </button>
       {
-        abierto ? <Reloj/> : ""
+        // abierto ? <Reloj/> : ""
       }
-      
+      <ClicksYRenders />
     </>
   )
 }
