@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 export default function Ficha({ nombre, rol }) {
   const [favorito, setFavorito] = useState(false);
 
+  console.log(favorito)
 
   useEffect(() => {
     setFavorito(localStorage.getItem("favorito"))
   },[])
 
   function manejarClicks() {
-    setFavorito(!favorito)
     localStorage.setItem("favorito", !favorito);
+    setFavorito(!favorito)
 
   }
 
@@ -20,10 +21,10 @@ export default function Ficha({ nombre, rol }) {
         ficha
       </h1>
 
-      { favorito === true ? <button onClick = {manejarClicks}>
-        favorito
+      { favorito === 'true' || favorito === true ? <button onClick = {manejarClicks}>
+       favorito
       </button> : <button onClick = {manejarClicks}>
-        no favorito
+      no favorito
       </button>  }
 
     </>
