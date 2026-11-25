@@ -1,14 +1,10 @@
 import {useState } from "react"
+import useContador from "../hooks/useContador"
 
 export default function ContandoVisitas() {
-  const [contador, setContador] = useState(0)
+   const { sumar, contador} = useContador()
 
-  console.log(contador)
-
-  function sumar() {
-  setContador (contador + 1)
-}
-  return(
+   return(
     <div>
       <p>
         contador:{contador}

@@ -1,17 +1,15 @@
-import {useState } from "react"
+import { useState } from "react"
+import useContador from "../hooks/useContador"
 
 export default function ContandoCafes() {
-  const [contador, setContador] = useState(0)
+//agarramos lo que queramos del hook, variables, funciones
+  const { sumar, contador} = useContador()
 
-  console.log(contador)
 
-  function sumar() {
-  setContador (contador + 1)
-}
   return(
     <div>
       <p>
-        contador:{contador}
+        contador cafe:{contador}
      </p>
     <button onClick={sumar}>
       Incrementar

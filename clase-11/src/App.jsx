@@ -7,7 +7,7 @@ import ContandoCafes from './componentes/ContadorDeCafes';
 import ContandoVisitas from './componentes/ContadorDeVisitas';
 
 function App() {
-  const [abierto,setAbierto] = useState(true)
+  const [abierto, setAbierto] = useState(true)
 
   function ocultarReloj (){
     setAbierto(!abierto)
