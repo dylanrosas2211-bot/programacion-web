@@ -5,7 +5,7 @@ const URL = "https://pokeapi.co/api/v2/pokemon/pikachu"
 function Pokemon() {
   const [pokemones, setPokemones] = useState(null)
 
-  const [buscar,setBuscar] = useState(null)
+
 
 
   async function traerPokemones() {
